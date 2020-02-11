@@ -10,53 +10,100 @@
   <body>
     <main>
       <h1>Japan Rent Calculator</h1>
-      <div class="flex one two-800">
+      <div class="flex one three-800 two-1200">
         <form>
-          <label>
-            <h3>Monthly cost</h3>
-            <p>As specified in the ad:</p>
-            <input name="monthly" value="150000" type="number" /> ¥ / month
+          <label class="flex one two-1200 space">
+            <div>
+              <h3>Monthly cost</h3>
+              <p>As specified in the ad</p>
+            </div>
+            <div>
+              <fieldset>
+                <input name="monthly" value="150000" type="number" />
+                <div class="unit">¥ / month</div>
+              </fieldset>
+            </div>
           </label>
-          <label>
-            <h3>Estimated stay</h3>
-            <p>How long do you expect to live there:</p>
-            <input name="stay" value="2" type="number" min="0" /> years
+          <label class="flex one two-1200 space">
+            <div>
+              <h3>Estimated stay</h3>
+              <p>How long will you live there</p>
+            </div>
+            <div>
+              <fieldset>
+                <input name="stay" value="2" type="number" min="0" />
+                <div class="unit">years</div>
+              </fieldset>
+            </div>
           </label>
-          <label>
-            <h3>
-              Deposit
-              <span
-                class="tooltip-top"
-                data-tooltip="Often owners won't return this"
-                >ℹ️</span
-              >
-            </h3>
-            <p>How many months of deposit do they require:</p>
-            <input name="deposit" value="2" type="number" min="0" /> months
+          <label class="flex one two-1200 space">
+            <div>
+              <h3>
+                Deposit
+                <span
+                  class="tooltip-top"
+                  data-tooltip="Often owners won't return this"
+                  >ℹ️</span
+                >
+              </h3>
+              <p>Don't expect to get this back</p>
+            </div>
+            <div>
+              <fieldset>
+                <input name="deposit" value="2" type="number" min="0" />
+                <div class="unit">months</div>
+              </fieldset>
+            </div>
           </label>
-          <label>
-            <h3>
-              Key Money
-              <span
-                class="tooltip-top"
-                data-tooltip="This is a mandatory present to the owner 🤷‍"
-                >ℹ️</span
-              >
-            </h3>
-            <p>How many months do they require:</p>
-            <input name="key" value="1" type="number" min="0" /> months
+          <label class="flex one two-1200 space">
+            <div>
+              <h3>
+                Key Money
+                <span
+                  class="tooltip-top"
+                  data-tooltip="This is a mandatory present to the owner 🤷‍"
+                  >ℹ️</span
+                >
+              </h3>
+              <p>Required present for the owner</p>
+            </div>
+            <div>
+              <fieldset>
+                <input name="key" value="1" type="number" min="0" />
+                <div class="unit">months</div>
+              </fieldset>
+            </div>
+          </label>
+          <label class="flex one two-1200 space">
+            <div>
+              <h3>
+                Agent Fee
+                <span
+                  class="tooltip-top"
+                  data-tooltip="Only if you go through an agent"
+                  >ℹ️</span
+                >
+              </h3>
+              <p>The Real Estate Agent fee</p>
+            </div>
+            <div>
+              <fieldset>
+                <input name="estate" value="1" type="number" min="0" />
+                <div class="unit">months</div>
+              </fieldset>
+            </div>
           </label>
         </form>
 
-        <div class="result">
+        <div class="result two-third-800 half-1200">
           <div class="flex three">
             <div class="full"><h2>Results</h2></div>
             <div>Monthly Average</div>
             <div class="two-third">
-              <span class="average">(+12.5%) ￥168,750</span>
+              <span class="average">(+16.7%) ￥175,000</span>
             </div>
             <div>Total to pay</div>
-            <div class="two-third"><span class="total">￥4,050,000</span></div>
+            <div class="two-third"><span class="total">￥4,200,000</span></div>
 
             <div class="full"><h3>Partial calculations</h3></div>
             <div>Rent</div>
@@ -76,6 +123,12 @@
               <span class="monthly">￥150,000</span> x
               <span class="key">1</span> =
               <span class="totalKey">￥150,000</span>
+            </div>
+            <div>Agent Fee</div>
+            <div class="two-third">
+              <span class="monthly">￥150,000</span> x
+              <span class="estate">1</span> =
+              <span class="totalEstate">￥150,000</span>
             </div>
           </div>
         </div>
