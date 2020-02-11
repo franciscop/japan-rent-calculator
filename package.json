@@ -1,0 +1,16 @@
+{
+  "name": "japan-rent-calculator",
+  "type": "module",
+  "scripts": {
+    "start": "live-server"
+  },
+  "dependencies": {
+    "live-server": "^1.2.1"
+  },
+  "version": "1.0.0",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "UNLICENSED",
+  "description": ""
+}

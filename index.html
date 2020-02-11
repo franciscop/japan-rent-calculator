@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1" />
+    <title>Japan Rent Calculator</title>
+    <link rel="stylesheet" href="https://unpkg.com/picnic" />
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Japan Rent Calculator</h1>
+      <div class="flex one two-800">
+        <form>
+          <label>
+            <h3>Monthly cost</h3>
+            <p>As specified in the ad:</p>
+            <input name="monthly" value="150000" type="number" /> ¥ / month
+          </label>
+          <label>
+            <h3>Estimated stay</h3>
+            <p>How long do you expect to live there:</p>
+            <input name="stay" value="2" type="number" min="0" /> years
+          </label>
+          <label>
+            <h3>
+              Deposit
+              <span
+                class="tooltip-top"
+                data-tooltip="Often owners won't return this"
+                >ℹ️</span
+              >
+            </h3>
+            <p>How many months of deposit do they require:</p>
+            <input name="deposit" value="2" type="number" min="0" /> months
+          </label>
+          <label>
+            <h3>
+              Key Money
+              <span
+                class="tooltip-top"
+                data-tooltip="This is a mandatory present to the owner 🤷‍"
+                >ℹ️</span
+              >
+            </h3>
+            <p>How many months do they require:</p>
+            <input name="key" value="1" type="number" min="0" /> months
+          </label>
+        </form>
+
+        <div class="result">
+          <div class="flex three">
+            <div class="full"><h2>Results</h2></div>
+            <div>Monthly Average</div>
+            <div class="two-third">
+              <span class="average">(+12.5%) ￥168,750</span>
+            </div>
+            <div>Total to pay</div>
+            <div class="two-third"><span class="total">￥4,050,000</span></div>
+
+            <div class="full"><h3>Partial calculations</h3></div>
+            <div>Rent</div>
+            <div class="two-third">
+              <span class="monthly">￥150,000</span> x
+              <span class="stay">(2 x 12)</span> =
+              <span class="totalMonthly">￥3,600,000</span>
+            </div>
+            <div>Deposit</div>
+            <div class="two-third">
+              <span class="monthly">￥150,000</span> x
+              <span class="deposit">2</span> =
+              <span class="totalDeposit">￥300,000</span>
+            </div>
+            <div>Key Money</div>
+            <div class="two-third">
+              <span class="monthly">￥150,000</span> x
+              <span class="key">1</span> =
+              <span class="totalKey">￥150,000</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script
+      src="https://unpkg.com/forn@1.3.1/forn.min.js"
+      charset="utf-8"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/umbrellajs"
+      charset="utf-8"
+    ></script>
+    <script src="/script.js" charset="utf-8"></script>
+  </body>
+</html>
