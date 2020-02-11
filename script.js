@@ -12,6 +12,7 @@ setInterval(() => {
     const key = Number(data.key);
     const deposit = Number(data.deposit);
     const estate = Number(data.estate);
+    const guarantor = Number(data.guarantor);
 
     const totalMonthly = monthly * stay;
     $result.find(".monthly").text(toStr(monthly));
@@ -26,11 +27,16 @@ setInterval(() => {
     $result.find(".deposit").text(deposit);
     $result.find(".totalDeposit").text(toStr(totalDeposit));
 
-    const totalEstate = monthly * estate;
-    $result.find(".estate").text(estate);
+    const totalEstate = monthly * estate * 1.1;
+    $result.find(".estate").text(`${estate} x 1.10`);
     $result.find(".totalEstate").text(toStr(totalEstate));
 
-    const total = totalMonthly + totalKey + totalDeposit + totalEstate;
+    const totalGuarantor = monthly * guarantor * 1.1;
+    $result.find(".guarantor").text(`${guarantor} x 1.10`);
+    $result.find(".totalGuarantor").text(toStr(totalGuarantor));
+
+    const total =
+      totalMonthly + totalKey + totalDeposit + totalEstate + totalGuarantor;
     $result.find(".total").text(toStr(total));
 
     const average = total / stay;

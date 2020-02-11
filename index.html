@@ -104,18 +104,35 @@
           <label class="flex one two-1200 space">
             <div>
               <h3>
-                Agent Fee
+                Real Estate Agent
                 <span
                   class="tooltip-top"
                   data-tooltip="Only if you go through an agent"
                   >ℹ️</span
                 >
               </h3>
-              <p>The Real Estate Agent fee</p>
+              <p>The rental place fee + tax</p>
             </div>
             <div>
               <fieldset>
                 <input name="estate" value="1" type="number" min="0" />
+                <div class="unit">months</div>
+              </fieldset>
+            </div>
+          </label>
+          <label class="flex one two-1200 space">
+            <div>
+              <h3>
+                Guarantor
+                <span class="tooltip-top" data-tooltip="You might not need this"
+                  >ℹ️</span
+                >
+              </h3>
+              <p>How much they charge + tax</p>
+            </div>
+            <div>
+              <fieldset>
+                <input name="guarantor" value="1" type="number" min="0" />
                 <div class="unit">months</div>
               </fieldset>
             </div>
@@ -154,8 +171,14 @@
             <div>Agent Fee</div>
             <div class="two-third">
               <span class="monthly">￥150,000</span> x
-              <span class="estate">1</span> =
-              <span class="totalEstate">￥150,000</span>
+              <span class="estate">1 x 1.10</span> =
+              <span class="totalEstate">￥165,000</span>
+            </div>
+            <div>Guarantor Fee</div>
+            <div class="two-third">
+              <span class="monthly">￥150,000</span> x
+              <span class="guarantor">1 x 1.10</span> =
+              <span class="totalGuarantor">￥165,000</span>
             </div>
           </div>
         </div>
