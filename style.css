@@ -1,7 +1,6 @@
 body {
   background: #eee;
   max-width: 1100px;
-  font-size: 18px;
   height: auto;
   overflow: auto;
 }
@@ -13,7 +12,7 @@ main {
 
 h1 {
   padding: 0;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
   line-height: 1;
   font-size: 1.5em;
 }
@@ -21,7 +20,7 @@ h1 {
 @media (min-width: 900px) {
   body {
     margin: 80px auto;
-    background: url("/japan_light.jpg");
+    background: url("/japan.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -33,7 +32,6 @@ h1 {
   }
 
   h1 {
-    padding-bottom: 30px;
     font-size: 2em;
   }
 }
