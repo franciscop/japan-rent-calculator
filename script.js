@@ -7,7 +7,7 @@ const $result = u(".result");
 const setText = (sel, val) => {
   const prev = $result.find(sel).text();
   if (prev === val) return;
-  $result.text(val);
+  $result.find(sel).text(val);
 };
 
 setInterval(() => {
