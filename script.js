@@ -3,10 +3,17 @@ const toStr = num =>
     num
   );
 
+const $result = u(".result");
+const setText = (sel, val) => {
+  const prev = $result.find(sel).text();
+  if (prev === val) return;
+  $result.text(val);
+};
+
 setInterval(() => {
   forn(data => {
     console.log("Tick!");
-    const $result = u(".result");
+
     const monthly = Number(data.monthly);
     const stay = Number(data.stay) * 12;
     const key = Number(data.key);
@@ -15,32 +22,32 @@ setInterval(() => {
     const guarantor = Number(data.guarantor);
 
     const totalMonthly = monthly * stay;
-    $result.find(".monthly").text(toStr(monthly));
-    $result.find(".stay").text(`(${data.stay} x 12)`);
-    $result.find(".totalMonthly").text(toStr(totalMonthly));
+    setText(".monthly", toStr(monthly));
+    setText(".stay", `(${data.stay} x 12)`);
+    setText(".totalMonthly", toStr(totalMonthly));
 
     const totalKey = monthly * key;
-    $result.find(".key").text(key);
-    $result.find(".totalKey").text(toStr(totalKey));
+    setText(".key", key);
+    setText(".totalKey", toStr(totalKey));
 
     const totalDeposit = monthly * deposit;
-    $result.find(".deposit").text(deposit);
-    $result.find(".totalDeposit").text(toStr(totalDeposit));
+    setText(".deposit", deposit);
+    setText(".totalDeposit", toStr(totalDeposit));
 
     const totalEstate = monthly * estate * 1.1;
-    $result.find(".estate").text(`${estate} x 1.10`);
-    $result.find(".totalEstate").text(toStr(totalEstate));
+    setText(".estate", `${estate} x 1.10`);
+    setText(".totalEstate", toStr(totalEstate));
 
     const totalGuarantor = monthly * guarantor * 1.1;
-    $result.find(".guarantor").text(`${guarantor} x 1.10`);
-    $result.find(".totalGuarantor").text(toStr(totalGuarantor));
+    setText(".guarantor",`${guarantor} x 1.10`);
+    setText(".totalGuarantor", toStr(totalGuarantor));
 
     const total =
       totalMonthly + totalKey + totalDeposit + totalEstate + totalGuarantor;
-    $result.find(".total").text(toStr(total));
+    setText(".total", toStr(total));
 
     const average = total / stay;
     const diff = ((100 * (average - monthly)) / monthly).toFixed(1);
-    $result.find(".average").text(`(+${diff}%) ${toStr(average)}`);
+    setText(".average", `(+${diff}%) ${toStr(average)}`);
   })(u("form").first());
 }, 1000);
