@@ -12,8 +12,6 @@ const setText = (sel, val) => {
 
 setInterval(() => {
   forn(data => {
-    console.log("Tick!");
-
     const monthly = Number(data.monthly);
     const stay = Number(data.stay) * 12;
     const key = Number(data.key);
