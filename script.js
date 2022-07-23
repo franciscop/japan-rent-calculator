@@ -1,4 +1,4 @@
-const toStr = num =>
+const toStr = (num) =>
   new Intl.NumberFormat("ja-JA", { style: "currency", currency: "JPY" }).format(
     num
   );
@@ -11,17 +11,18 @@ const setText = (sel, val) => {
 };
 
 setInterval(() => {
-  forn(data => {
+  forn((data) => {
     const monthly = Number(data.monthly);
     const stay = Number(data.stay) * 12;
     const key = Number(data.key);
     const deposit = Number(data.deposit);
     const estate = Number(data.estate);
     const guarantor = Number(data.guarantor);
+    const renewal = Number(data.renewal);
 
     const totalMonthly = monthly * stay;
     setText(".monthly", toStr(monthly));
-    setText(".stay", `(${data.stay} x 12)`);
+    setText(".stay", `(${data.stay} × 12)`);
     setText(".totalMonthly", toStr(totalMonthly));
 
     const totalKey = monthly * key;
@@ -33,15 +34,25 @@ setInterval(() => {
     setText(".totalDeposit", toStr(totalDeposit));
 
     const totalEstate = monthly * estate * 1.1;
-    setText(".estate", `${estate} x 1.10`);
+    setText(".estate", `${estate} × 1.10`);
     setText(".totalEstate", toStr(totalEstate));
 
     const totalGuarantor = monthly * guarantor * 1.1;
-    setText(".guarantor",`${guarantor} x 1.10`);
+    setText(".guarantor", `${guarantor} × 1.10`);
     setText(".totalGuarantor", toStr(totalGuarantor));
 
+    const renewalMultiple = Math.floor((stay - 1) / 24);
+    const totalRenewal = monthly * renewalMultiple;
+    setText(".renewal", `${renewal} × ${renewalMultiple}`);
+    setText(".totalRenewal", toStr(totalRenewal));
+
     const total =
-      totalMonthly + totalKey + totalDeposit + totalEstate + totalGuarantor;
+      totalMonthly +
+      totalKey +
+      totalDeposit +
+      totalEstate +
+      totalGuarantor +
+      totalRenewal;
     setText(".total", toStr(total));
 
     const average = total / stay;

@@ -166,6 +166,31 @@
               </fieldset>
             </div>
           </label>
+          <label class="flex one two-1200 space">
+            <div>
+              <h3>
+                Renewal
+                <span
+                  class="tooltip-top"
+                  data-tooltip="Contract renewal usually is 1 month"
+                  >ℹ️</span
+                >
+              </h3>
+              <p>Cost to renew every 2 years</p>
+            </div>
+            <div>
+              <fieldset>
+                <input
+                  name="renewal"
+                  value="1"
+                  type="number"
+                  step="0.1"
+                  min="0"
+                />
+                <div class="unit">months</div>
+              </fieldset>
+            </div>
+          </label>
         </form>
 
         <div class="result two-third-800 half-1200">
@@ -181,33 +206,39 @@
             <div class="full"><h3>Partial calculations</h3></div>
             <div>Rent</div>
             <div class="two-third">
-              <span class="monthly">￥150,000</span> x
+              <span class="monthly">￥150,000</span> ×
               <span class="stay">(2 x 12)</span> =
               <span class="totalMonthly">￥3,600,000</span>
             </div>
             <div>Deposit</div>
             <div class="two-third">
-              <span class="monthly">￥150,000</span> x
+              <span class="monthly">￥150,000</span> ×
               <span class="deposit">2</span> =
               <span class="totalDeposit">￥300,000</span>
             </div>
             <div>Key Money</div>
             <div class="two-third">
-              <span class="monthly">￥150,000</span> x
+              <span class="monthly">￥150,000</span> ×
               <span class="key">1</span> =
               <span class="totalKey">￥150,000</span>
             </div>
             <div>Agent Fee</div>
             <div class="two-third">
-              <span class="monthly">￥150,000</span> x
-              <span class="estate">1 x 1.10</span> =
+              <span class="monthly">￥150,000</span> ×
+              <span class="estate">1 × 1.10</span> =
               <span class="totalEstate">￥165,000</span>
             </div>
             <div>Guarantor Fee</div>
             <div class="two-third">
-              <span class="monthly">￥150,000</span> x
-              <span class="guarantor">1 x 1.10</span> =
+              <span class="monthly">￥150,000</span> ×
+              <span class="guarantor">1 × 1.10</span> =
               <span class="totalGuarantor">￥165,000</span>
+            </div>
+            <div>Renewal Fee</div>
+            <div class="two-third">
+              <span class="monthly">￥150,000</span> ×
+              <span class="renewal">1</span> =
+              <span class="totalRenewal">￥150,000</span>
             </div>
           </div>
         </div>
