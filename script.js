@@ -42,7 +42,7 @@ setInterval(() => {
     setText(".totalGuarantor", toStr(totalGuarantor));
 
     const renewalMultiple = Math.floor((stay - 1) / 24);
-    const totalRenewal = monthly * renewalMultiple;
+    const totalRenewal = monthly * renewal * renewalMultiple;
     setText(".renewal", `${renewal} × ${renewalMultiple}`);
     setText(".totalRenewal", toStr(totalRenewal));
 
