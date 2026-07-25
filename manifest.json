@@ -1,0 +1,37 @@
+{
+  "name": "Japan Rent Calculator",
+  "short_name": "Rent Japan",
+  "description": "Calculate the monthly rent average for the length of your stay at a place",
+  "lang": "en",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#eeeeee",
+  "theme_color": "#f4900c",
+  "icons": [
+    {
+      "src": "https://japan-rent-calculator.com/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "https://japan-rent-calculator.com/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "https://japan-rent-calculator.com/favicon.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "https://japan-rent-calculator.com/favicon.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
